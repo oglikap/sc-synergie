@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@font-face {
+  font-family: 'Proxima Semibold';
+  src: url('../../fonts/proxima_semibold.woff2') format('woff2'), url('../../fonts/proxima_semibold.woff') format('woff'), url('../../fonts/proxima_semibold.ttf') format('truetype'), url('../../fonts/proxima_semibold.eot') format('eot');
+}
+@import "flex";
+
+$blue: #466192;
+$blue-trans: rgba(69, 96, 146, .6);
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Proxima Semibold', 'PT Sans', sans-serif;
+  background: white;
+}
+#header, #menu {
+  background: $blue;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 4px double lightgrey;
+}
+.cards img, .hvrbox img, .logo img, .custom-logo-link img {
+  border: 0;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Cabin Sketch', cursive;
+  color: orange;
+}
+.button.special {
+  background-color: $blue;
+}
+.button.special:hover {
+  background-color: orange !important;
+}
+ul {
+  list-style: none;
+}
+ul.fa {
+  list-style: none;
+  font-family: inherit;
+  width: 100%;
+  li {
+    line-height: 2.5;
+    text-align: center;
+    font-weight: bold;
+  }
+ li:before {
+   font-family: 'FontAwesome';
+   content: '\f046';
+   color: orange;
+ }
+}
+
+.flex {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+}
+
+body.is-mobile.landing #footer,
+body.landing #footer {
+  background: $blue;
+}
+.widget {
+  h2 {
+    color: $blue;
+  }
+  p {
+    color: #2e3842;
+  }
+}
+#footer {
+  background: $blue;
+}
+strong, .wrapper.style5 strong, .wrapper.style5 b {
+  color: $blue;
+  font-size: 1.1em;
+}
+ul.navigation {
+  @include flexbox;
+  @include justify-content(space-around);
+  > li > a, .fa-angle-right:before, .fa-angle-left:before {
+    color: $blue;
+  }
+}
+#footer {
+  background: $blue;
+}
+/* Alignment */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 15px;
+	margin-right: 1.5rem;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 15px;
+	margin-left: 1.5rem;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.alignnone {
+	margin: 10px 0;
+}
+
+
+@import "typography";
+@import "broken-line";
+@import "banner";
+@import "one";
+@import "quotes";
+@import "two";
+@import "hvrbox";
+@import "scrollback";
+@import "about";
+@import "news";

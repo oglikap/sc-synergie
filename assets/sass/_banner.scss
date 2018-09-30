@@ -1,0 +1,130 @@
+
+body.landing #page-wrapper, body.is-mobile.landing #banner, body.is-mobile.landing .wrapper.style4 {
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("../../images/banner.jpg");
+}
+
+#banner {
+  ul.navi > li > a.button {
+    width: 8em;
+    height: 8em;
+//    line-height: 128px;
+    border-radius: 100%;
+    position: absolute;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    &.one {
+      right: 20%;
+      top: 15%;
+    }
+    &.two {
+      right: 12.5%;
+      top: 32%;
+    }
+    &.three {
+      right: 15%;
+      top: 53%;
+    }
+    &.four {
+      right: 22.5%;
+      top: 70%;
+    }
+  }
+
+  .box {
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    width: 28%;
+    border: 0;
+    padding: 0;
+    h2 {
+      width: 66%;
+      margin: 0;
+      padding: 0;
+      &:before, &:after {
+        height: 0;
+      }
+    }
+    p {
+      text-shadow: 0 0 8px black;
+    }
+  }
+}
+
+a {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 1681px) {
+
+  body.landing #page-wrapper {
+    background-position: top;
+  }
+
+}
+
+@media screen and (max-width: 1680px) {
+
+  #banner, body.is-mobile.landing .wrapper.style4 {
+    background-position: top;
+  }
+  body.landing #page-wrapper {
+    background-position: top;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+
+  body.is-mobile.landing #banner, body.is-mobile.landing .wrapper.style4 {
+    background-position: 33%;
+  }
+
+  #banner {
+    ul.navi {
+      display: none;
+    }
+  }
+
+}
+
+@media screen and (max-width: 782px) {
+
+  body.is-mobile.landing #banner, body.is-mobile.landing .wrapper.style4 {
+    background-position: 38%;
+  }
+
+  #banner {
+    height: 100vh;
+    padding: 0;
+
+    .box {
+      width: 33%;
+    }
+    .more {
+      display: block;
+    }
+  }
+
+}
+
+@media screen and (max-width:600px) {
+
+  #banner {
+    .box {
+      width: 40%;
+    }
+  }
+
+}
+
+@media screen and (max-width:480px) {
+
+  #banner {
+    .box {
+      width: 45%;
+    }
+  }
+
+}

@@ -1,0 +1,71 @@
+.post-template-single-about {
+
+  #header nav {
+      top: 50%;
+      right: 2%;
+  }
+  hr {
+    border-bottom: 1px solid lightgrey;
+  }
+   #header nav > ul > li > a {
+    background: rgba(255, 173, 0, .7)
+  }
+  #page-wrapper.background {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../images/wallpaper-1440.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .spotlight:nth-child(1) {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .spotlight h2 {
+    color: $blue;
+  }
+  #header {
+  }
+  p {
+    color: black;
+  }
+  h2 img {
+    width: 175px;
+    padding: 0 1em;
+    margin-top: -1em;
+  }
+  .spotlight {
+    .image {
+      width: 25%;
+      img {
+        border-radius: 100%;
+      }
+      footer > a > i {
+        color: $blue;
+        font-size: 2em;
+        margin-top: 1em;
+        padding-right: .5em;
+      }
+    }
+    .content {
+      width: 74%
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+
+    .spotlight {
+      text-align: center;
+      .image {
+        width: 33%;
+      }
+      .content {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .spotlight .image {
+      width: 55%;
+    }
+
+  }
+}
